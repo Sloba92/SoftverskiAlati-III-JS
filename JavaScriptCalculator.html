@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Operacija(opcija){
+            var br1 = document.izracunaj.x.value - 0;
+            var br2 = parseInt(document.izracunaj.y.value);
+            var ukupno = 0;
+            if((isNaN(br1)==false) && (isNaN(br2)==false)){
+            switch(opcija){
+                case 1: ukupno = br1 + br2;
+                break;
+            }
+            document.izracunaj.zbir.value = ukupno;}
+            else {
+                alert("Digitron radi samo sa brojevima!!!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="izracunaj">
+        X &nbsp; = &nbsp; <input type="text" name="x" size="5"><br><br>
+        Y &nbsp; = &nbsp; <input type="text" name="y" size="5"><br><br>
+        <input type="button" value="+" name="dugme_sabiranje" onclick="Operacija(1)">
+        <hr>
+        Rezultat &nbsp; = &nbsp; <input type="text" name="zbir" size="5">
+    </form>
+</body>
+</html>
